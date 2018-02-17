@@ -6,6 +6,10 @@
 	display: block;
 }
 
+#loginForm {
+	display: block;
+}
+
 .formQuestion {
 	display: block;
 	text-align: center;
@@ -22,4 +26,9 @@ h2 {
 
 label {
 	vertical-align: middle;
+}
+
+input, button {
+	margin-bottom: 1em;
+	margin-top: 1em;
 }

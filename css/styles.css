@@ -1,9 +1,13 @@
-body {
-	
-}
-
 .container {
 	padding: 25px;
+}
+
+#theForm {
+	display: block;
+}
+
+.formQuestion {
+	display: inline-block;
 }
 
 h1 {

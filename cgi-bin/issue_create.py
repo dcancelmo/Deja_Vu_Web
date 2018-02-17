@@ -19,7 +19,7 @@ form = cgi.FieldStorage()
 
 uuidObj = uuid
 uID = uuidObj.uuid4()
-user = str(form['username'].value)
+user = "administrator"
 name = str(form['name'].value)
 description = str(form['description'].value)
 solution = str(form['solution'].value)

@@ -7,7 +7,7 @@ html, body {
 	background-color: #fffbe4;
 }
 
-#submissionForm {
+#submissionForm, #loginForm {
 	display: block;
 }
 
@@ -37,4 +37,9 @@ body {
 label {
 	display: block;
 	text-align: left;
+}
+
+input, button {
+	margin-top: 1em;
+	margin-bottom: 1em;
 }

@@ -14,13 +14,40 @@
 
 <div class="container">
 
-	<div class="row">
-		<div class="col-lg" id="header">
-			<h1>Deja Vu</h1>
-		</div>
+	<div class="row" id="headerTitle">
+		<h1>Deja Vu</h1>
 	</div>
 
-	<form id="theForm" action="" method="post">
+	<!-- Issue Lookup Form -->
+	<div class="row">
+		<h2>Search for an Issue</h2>
+	</div>
+
+	<form id="lookupForm" action="" method="post">
+		<div class="row">
+			<label>Search by:</label>
+
+			<input type="radio" id="radioB1" name="name" value="name">
+			<label for="radioB1">Name</label>
+
+			<input type="radio" id="radioB2" name="description" value="description">
+			<label for="radioB2">Description</label>
+
+			<input type="radio" id="radioB3" name="solution" value="solution">
+			<label for="radioB3">Solution</label>
+
+			<input type="radio" id="radioB4" name="tags" value="tags">
+			<label for="radioB4">Tags</label>
+
+		</div>
+	</form>
+
+	<!-- Issue submission form -->
+	<div class="row">
+		<h2>Submit a New Issue</h2>
+	</div>
+
+	<form id="submissionForm" action="" method="post">
 			<div class="row formQuestion">
 				<label>Name for issue:</label>
 				<input type="text" name="name">
@@ -29,12 +56,17 @@
 
 			<div class="row formQuestion">
 				<label>Description:</label>
-				<textarea name="description"></textarea>
+				<textarea name="description" rows="4" cols="50"></textarea>
 			</div>
 
 			<div class="row formQuestion">
 				<label>Solution:</label>
-				<textarea name="solution"></textarea>
+				<textarea name="solution" rows="4" cols="50"></textarea>
+			</div>
+
+			<div class="row formQuestion">
+				<label>Tags (separate with comma and space):</label>
+				<input type="text" name="tags" size="50">
 			</div>
 
 	</form>

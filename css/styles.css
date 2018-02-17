@@ -1,25 +1,40 @@
-.container {
-	padding: 25px;
+html, body {
+	background-color: #fffbe4;
 }
 
-#theForm {
+.container {
+	padding: 25px;
+	background-color: #fffbe4;
+}
+
+#submissionForm {
 	display: block;
 }
+
 
 .formQuestion {
 	display: block;
-	text-align: center;
+	padding-bottom: 20px;
 }
 
-h1 {
+
+h1,h2 {
 	font-family: 'Ubuntu Condensed', sans-serif;
-	text-align: center;
 }
 
-h2 {
+.h1, h1 {
+	font-size: 3rem;
+}
+
+#headerTitle {
+	padding-bottom: 25px;
+}
+
+body {
 	font-family: 'Lora', serif;
 }
 
 label {
-	vertical-align: middle;
+	display: block;
+	text-align: left;
 }

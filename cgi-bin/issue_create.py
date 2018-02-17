@@ -16,6 +16,7 @@ c.execute('CREATE TABLE IF NOT EXISTS users(username VARCHAR(30) PRIMARY KEY NOT
 
 form = cgi.FieldStorage()
 
+#TODO generate a uID
 user = str(form['username'].value)
 name = str(form['name'].value)
 description = str(form['description'].value)
@@ -26,4 +27,15 @@ else:
     attempts = None
 tagsList = str(form['tags'].value)
 tagArr = tagsList.split(", ")
+
+# Check if already in database
+try:
+    c.execute('INSERT INTO issues (uID, user, name, description, solution, attempts) VALUES (?, ?, ?, ?, ?, ?)',
+              [uID, user, name, description, solution, attempts])
+# else:
+except sqlite3.IntegrityError:
+
+conn.commit()
+conn.close()
+
 

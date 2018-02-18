@@ -10,8 +10,8 @@
         <link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu+Condensed" rel="stylesheet">
         <!-- Our CSS -->
         <link rel="stylesheet" href="css/styles.css">
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="js/passMatch.js"></script>
+    </head>
+        
 	<body>
         <div class="container">
             <div class="row">
@@ -38,5 +38,9 @@
                 </div>
             </form>
         </div>
+
+        <?php include('php/scripts.php'); ?>
+        <script src="js/passMatch.js"></script>
+
 	</body>
 </html>

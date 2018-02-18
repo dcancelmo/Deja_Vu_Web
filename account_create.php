@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<html>
 	<head>
-		<title>Puppy Love </title>
+		<title>Deja Vu</title>
 		<meta charset="UTF-8">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -17,9 +16,10 @@
             <div class="row">
                 <div class="col-lg" id="header">
                     <h1>Deja Vu</h1>
+                    <h2>Account Create</h2>
                 </div>
             </div>
-            <form id="loginForm" action="cgi-bin/account_create.py" method = "post">
+            <form id="accountForm" action="cgi-bin/account_create.py" method = "post">
                 <div class="row formQuestion">
                     <input type="text" name="username" id="user" placeholder = "Username" required>
                 </div>
@@ -33,7 +33,7 @@
                     <button type="submit" id="submit"> Create Account </button>
                 </div>
                 <div class="row formQuestion">
-                    <h4><a href="login.html">Go back to login</a></h4>
+                    <h4><a href="login.php">Go back to login</a></h4>
                     <h3 id="passMatch"></h3>
                 </div>
             </form>

@@ -45,33 +45,33 @@ try:
         print 'Content-Type: text/html'
         print
         print '''<html>
-                                <head>
-                                    <title>Error</title>
-                                    <script type = "text/javascript">
-                                    	alert("Error. Failure to create tags entry.");
-                                    	window.location.href = "../index.html";
-                                    </script>
-                                </head>
-                                <body>
-                                </body>
-                            </html>
-                            '''
+                    <head>
+                        <title>Error</title>
+                        <script type = "text/javascript">
+                            alert("Error. Failure to create tags entry.");
+                            window.location.href = "../index.html";
+                        </script>
+                    </head>
+                    <body>
+                    </body>
+                </html>
+                '''
 # else:
 except sqlite3.IntegrityError:
     print 'Content-Type: text/html'
     print
     print '''<html>
-                        <head>
-                            <title>Error</title>
-                            <script type = "text/javascript">
-                            	alert("Error. Failure to create issue entry.");
-                            	window.location.href = "../index.html";
-                            </script>
-                        </head>
-                        <body>
-                        </body>
-                    </html>
-                    '''
+                <head>
+                    <title>Error</title>
+                    <script type = "text/javascript">
+                        alert("Error. Failure to create issue entry.");
+                        window.location.href = "../index.html";
+                    </script>
+                </head>
+                <body>
+                </body>
+            </html>
+            '''
 
 conn.commit()
 conn.close()

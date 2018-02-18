@@ -55,11 +55,11 @@ if stored_login_cookie:
 				test_pass = sha256(test_pass.encode('ascii')).hexdigest()
 
 				if hashed_pass == test_pass:
-					print 'Content-Type: text/html'
 					cookie = Cookie.SimpleCookie()
 					cookie['LOGIN'] = userName
 					expires = datetime.datetime.utcnow() + datetime.timedelta(days=30)
 					cookie['LOGIN']['expires'] = expires.strftime('%a, %d %b %Y %H:%M:%S')
+					print 'Content-Type: text/html'
 					print cookie.output()
 					print "Location: ../index.php"
 					print
@@ -87,11 +87,11 @@ else:
 		test_pass = password + salt
 		test_pass = sha256(test_pass.encode('ascii')).hexdigest()
 		if hashed_pass == test_pass:
-			print 'Content-Type: text/html'
 			cookie = Cookie.SimpleCookie()
 			cookie['LOGIN'] = userName
 			expires = datetime.datetime.utcnow() + datetime.timedelta(days=30)
 			cookie['LOGIN']['expires'] = expires.strftime('%a, %d %b %Y %H:%M:%S')
+			print 'Content-Type: text/html'
 			print cookie.output()
 			print
 			print "Content-Type: text/html"

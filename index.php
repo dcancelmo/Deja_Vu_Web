@@ -29,22 +29,22 @@
 		</div>
 
 		<div class="row">
-			<input type="radio" id="radioB1" name="name" value="name">
+			<input type="radio" id="radioB1" name="searchFor" value="name">
 			<label for="radioB1">Name</label>
 		</div>
 
 		<div class="row">
-			<input type="radio" id="radioB2" name="description" value="description">
+			<input type="radio" id="radioB2" name="searchFor" value="description">
 			<label for="radioB2">Description</label>
 		</div>
 
 		<div class="row">
-			<input type="radio" id="radioB3" name="solution" value="solution">
+			<input type="radio" id="radioB3" name="searchFor" value="solution">
 			<label for="radioB3">Solution</label>
 		</div>
 
 		<div class="row">
-			<input type="radio" id="radioB4" name="tags" value="tags">
+			<input type="radio" id="radioB4" name="searchFor" value="tags">
 			<label for="radioB4">Tags</label>
 		</div>
 

@@ -12,7 +12,7 @@ cgitb.enable()
 
 print 'Content-Type: text/html'
 
-database_name = 'createUser.db'
+database_name = 'dejavu.db'
 table_name = 'users'
 
 form = cgi.FieldStorage()
@@ -39,9 +39,8 @@ try:
     expires = datetime.datetime.now() + datetime.timedelta(days=30)
     cookie['LOGIN']['expires'] = expires.strftime('%a, %d %b %Y %H:%M:%S')
     print cookie.output()
-    print "Location: ../index.html"
+    print "Location: ../index.php"
     print
-    # print open()
 # else:
 except sqlite3.IntegrityError:
     print

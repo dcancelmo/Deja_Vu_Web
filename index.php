@@ -26,22 +26,32 @@
 	<form id="lookupForm" action="" method="post">
 		<div class="row">
 			<label>Search by:</label>
+		</div>
 
+		<div class="row">
 			<input type="radio" id="radioB1" name="name" value="name">
 			<label for="radioB1">Name</label>
+		</div>
 
+		<div class="row">
 			<input type="radio" id="radioB2" name="description" value="description">
 			<label for="radioB2">Description</label>
+		</div>
 
+		<div class="row">
 			<input type="radio" id="radioB3" name="solution" value="solution">
 			<label for="radioB3">Solution</label>
+		</div>
 
+		<div class="row">
 			<input type="radio" id="radioB4" name="tags" value="tags">
 			<label for="radioB4">Tags</label>
-
-			<input type="submit" value="Search">
-
 		</div>
+
+		<div class="row">
+			<input class="btn btn-info" type="submit" value="Search">
+		</div>
+
 	</form>
 
 	<!-- Issue submission form -->
@@ -69,6 +79,10 @@
 			<div class="row formQuestion">
 				<label>Tags (separate with comma and space):</label>
 				<input type="text" name="tags" size="50">
+			</div>
+
+			<div class="row formQuestion">
+				<input class="btn btn-success" type="submit" value="Submit">
 			</div>
 
 	</form>

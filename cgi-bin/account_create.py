@@ -39,7 +39,7 @@ try:
 	expires = datetime.datetime.now() + datetime.timedelta(days=30)
 	cookie['LOGIN']['expires'] = expires.strftime('%a, %d %b %Y %H:%M:%S')
 	print cookie.output()
-	print "Location: ../index.php"
+	print "Location: ../dashboard.php"
 	print
 # else:
 except sqlite3.IntegrityError:

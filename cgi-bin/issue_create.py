@@ -34,7 +34,7 @@ try:
         for currTag in tagArr:
             c.execute('INSERT INTO tags(uID, tag) VALUES (?, ?)', [uID, currTag])
             print 'Content-Type: text/php'
-            print "Location: ../index.php"
+            print "Location: ../dashboard.php"
             print
 
     except sqlite3.IntegrityError:

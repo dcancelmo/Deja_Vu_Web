@@ -18,7 +18,7 @@ c.execute('CREATE TABLE IF NOT EXISTS users(username varchar(30) primary key, pa
 stored_login_cookie = os.environ.get('HTTP_COOKIE')
 if stored_login_cookie:
 	cookie = Cookie.SimpleCookie(stored_login_cookie)
-	rsow = c.execute('SELECT * FROM users WHERE username = ?', [cookie['LOGIN'].value])
+	rows = c.execute('SELECT * FROM users WHERE username = ?', [cookie['LOGIN'].value])
 	#rows = rows.fetchone()
 	if rows.rowcount > 0: #unused code block?
 		# Resets expires to be 30 days from last login
@@ -43,37 +43,32 @@ if stored_login_cookie:
 					'''
 	else:
 		form = cgi.FieldStorage()
-		if ('username' in form) & ('password' in form):
-			userName = form['username'].value
-			password = form['password'].value
-			rows = c.execute('SELECT * FROM users WHERE username = ?', [userName])
-			rows = rows.fetchone()
-			if rows is not None:
-				hashed_pass = rows[1]
-				salt = rows[2]
-				test_pass = password + salt
-				test_pass = sha256(test_pass.encode('ascii')).hexdigest()
+		userName = form['username'].value
+		password = form['password'].value
+		rows = c.execute('SELECT * FROM users WHERE username = ?', [userName])
+		rows = rows.fetchone()
+		if rows is not None:
+			hashed_pass = rows[1]
+			salt = rows[2]
+			test_pass = password + salt
+			test_pass = sha256(test_pass.encode('ascii')).hexdigest()
 
-				if hashed_pass == test_pass:
-					cookie = Cookie.SimpleCookie()
-					cookie['LOGIN'] = userName
-					expires = datetime.datetime.utcnow() + datetime.timedelta(days=30)
-					cookie['LOGIN']['expires'] = expires.strftime('%a, %d %b %Y %H:%M:%S')
-					print 'Content-Type: text/html'
-					print cookie.output()
-					print "Location: ../index.php"
-					print
-				else:
-					print "Content-Type: text/html"
-					print "Location: ../loginMessages/incorrect.html"
-					print
+			if hashed_pass == test_pass:
+				cookie = Cookie.SimpleCookie()
+				cookie['LOGIN'] = userName
+				expires = datetime.datetime.utcnow() + datetime.timedelta(days=30)
+				cookie['LOGIN']['expires'] = expires.strftime('%a, %d %b %Y %H:%M:%S')
+				print 'Content-Type: text/html'
+				print cookie.output()
+				print "Location: ../index.php"
+				print
 			else:
 				print "Content-Type: text/html"
 				print "Location: ../loginMessages/incorrect.html"
 				print
 		else:
-			print 'Content-Type: text/html'
-			print "Location: ../loginMessages/missingInfo.html"
+			print "Content-Type: text/html"
+			print "Location: ../loginMessages/incorrect.html"
 			print
 else:
 	form = cgi.FieldStorage()
@@ -93,8 +88,6 @@ else:
 			cookie['LOGIN']['expires'] = expires.strftime('%a, %d %b %Y %H:%M:%S')
 			print 'Content-Type: text/html'
 			print cookie.output()
-			print
-			print "Content-Type: text/html"
 			print "Location: ../index.php"
 			print
 		else:

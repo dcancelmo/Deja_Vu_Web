@@ -33,8 +33,8 @@ try:
     try:
         for currTag in tagArr:
             c.execute('INSERT INTO tags(uID, tag) VALUES (?, ?)', [uID, currTag])
-            print 'Content-Type: text/html'
-            print "Location: ../index.html"
+            print 'Content-Type: text/php'
+            print "Location: ../index.php"
             print
 
     except sqlite3.IntegrityError:
@@ -45,7 +45,7 @@ try:
                         <title>Error</title>
                         <script type = "text/javascript">
                             alert("Error. Failure to create tags entry.");
-                            window.location.href = "../index.html";
+                            window.location.href = "../index.php";
                         </script>
                     </head>
                     <body>
@@ -61,7 +61,7 @@ except sqlite3.IntegrityError:
                     <title>Error</title>
                     <script type = "text/javascript">
                         alert("Error. Failure to create issue entry.");
-                        window.location.href = "../index.html";
+                        window.location.href = "../index.php";
                     </script>
                 </head>
                 <body>

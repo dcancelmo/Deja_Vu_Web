@@ -49,7 +49,7 @@ except sqlite3.IntegrityError:
                 <title>Invalid</title>
                 <script type = "text/javascript">
                     alert("Username already taken please choose another.");
-                    window.location.href = "../account_create.html";
+                    window.location.href = "../account_create.php";
                 </script>
             </head>
             <body>

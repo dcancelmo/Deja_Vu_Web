@@ -28,33 +28,22 @@ conn = sqlite3.connect(database_name)
 c = conn.cursor()
 
 c.execute(
-    'CREATE TABLE IF NOT EXISTS users(username VARCHAR(30) PRIMARY KEY, password char(64), timeCreated DATETIME)')
+	'CREATE TABLE IF NOT EXISTS users(username VARCHAR(30) PRIMARY KEY, password char(64), timeCreated DATETIME)')
 
 # Check if already in database
 try:
-    c.execute('INSERT INTO users (username, password, timeCreated) VALUES (?, ?, ?)',
-              [username, hashPass, timestamp])
-    cookie = Cookie.SimpleCookie()
-    cookie['LOGIN'] = username
-    expires = datetime.datetime.now() + datetime.timedelta(days=30)
-    cookie['LOGIN']['expires'] = expires.strftime('%a, %d %b %Y %H:%M:%S')
-    print cookie.output()
-    print "Location: ../index.php"
-    print
+	c.execute('INSERT INTO users (username, password, timeCreated) VALUES (?, ?, ?)',
+			  [username, hashPass, timestamp])
+	cookie = Cookie.SimpleCookie()
+	cookie['LOGIN'] = username
+	expires = datetime.datetime.now() + datetime.timedelta(days=30)
+	cookie['LOGIN']['expires'] = expires.strftime('%a, %d %b %Y %H:%M:%S')
+	print cookie.output()
+	print "Location: ../index.php"
+	print
 # else:
 except sqlite3.IntegrityError:
-    print
-    print '''<html>
-            <head>
-                <title>Invalid</title>
-                <script type = "text/javascript">
-                    alert("Username already taken please choose another.");
-                    window.location.href = "../account_create.php";
-                </script>
-            </head>
-            <body>
-            </body>
-        </html>
-        '''
+	print "Location: ../login_messages/user_unavailable.html"
+	print
 conn.commit()
 conn.close()

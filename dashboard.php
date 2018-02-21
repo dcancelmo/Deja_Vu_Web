@@ -22,7 +22,7 @@
 	<div class="row">
 		<h2>Search for an Issue</h2>
 	</div>
-
+	<h3><a href = "cgi-bin/logout.py">Log out</a></h3>
 	<form id="lookupForm" action="" method="post">
 		<div class="row">
 			<label>Search by:</label>

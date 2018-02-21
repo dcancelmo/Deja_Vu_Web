@@ -8,3 +8,4 @@ Deja Vu Web App
 * Search pages for each of the searchable fields
 	- With results pisplayed dynamically on same page
 * Page to view all issues
+* Fix display of navbar

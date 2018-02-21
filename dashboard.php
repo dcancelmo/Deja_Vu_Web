@@ -64,7 +64,7 @@
 		<h2>Submit a New Issue</h2>
 	</div>
 
-	<form id="submissionForm" action="" method="post">
+	<form id="submissionForm" action="cgi-bin/issue_create.py" method="post">
 			<div class="row formQuestion">
 				<label>Name for issue:</label>
 				<input type="text" name="name">

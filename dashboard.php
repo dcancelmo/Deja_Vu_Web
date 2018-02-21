@@ -44,8 +44,13 @@
 		</div>
 
 		<div class="row">
-			<input type="radio" id="radioB4" name="searchFor" value="tags">
-			<label for="radioB4">Tags</label>
+			<input type="radio" id="radioB4" name="searchFor" value="attempts">
+			<label for="radioB4">Attempts</label>
+		</div>
+
+		<div class="row">
+			<input type="radio" id="radioB5" name="searchFor" value="tags">
+			<label for="radioB5">Tags</label>
 		</div>
 
 		<div class="row">
@@ -74,6 +79,11 @@
 			<div class="row formQuestion">
 				<label>Solution:</label>
 				<textarea name="solution" rows="4" cols="50"></textarea>
+			</div>
+
+			<div class="row formQuestion">
+				<label>Attempts:</label>
+				<textarea name="attempts" rows="4" cols="50"></textarea>
 			</div>
 
 			<div class="row formQuestion">

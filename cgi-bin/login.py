@@ -28,11 +28,10 @@ if rows is not None:
 		cookie = Cookie.SimpleCookie()
 		cookie['LOGIN'] = userName
 		expires = datetime.datetime.utcnow() + datetime.timedelta(days=30)
-		cookie['LOGIN']['expires'] = expires.strftime('%a, %d %b %Y %H:%M:%S')
 		print 'Content-Type: text/html'
 		print cookie.output()
-		print "Location: ../dashboard.php"
 		print
+		print '''<html><head><script>sessionStorage.setItem("user", "''' + userName + '''");</script><script>window.location="../dashboard.php";</script></head></html>'''
 	else:
 		print "Content-Type: text/html"
 		print "Location: ../login_messages/incorrect.html"

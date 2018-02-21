@@ -16,4 +16,4 @@ print "Content-Type: text/html"
 print new_cookie
 print "Location: ../login.php"
 print
-print "<html><script>sessionStorage.clear()</script></html>"
+print "<html><head><script>sessionStorage.clear();</script></head></html>"

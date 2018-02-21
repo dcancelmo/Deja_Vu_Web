@@ -12,13 +12,14 @@
 </head>
 <body>
 
+<?php include('php/nav_bar.php'); ?>
+
 <div class="container">
 
 	<div class="row" id="headerTitle">
 		<h1>Deja Vu</h1>
 	</div>
 
-	<?php include('php/nav_bar.php'); ?>
 
 
 

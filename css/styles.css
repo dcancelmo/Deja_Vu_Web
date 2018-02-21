@@ -1,5 +1,6 @@
 html, body {
 	background-color: #fffbe4;
+	font-family: 'Lora', serif;
 }
 
 .container {
@@ -11,14 +12,12 @@ html, body {
 	display: block;
 }
 
-
 .formQuestion {
 	display: block;
 	padding-bottom: 20px;
 }
 
-
-h1,h2 {
+.navbar-brand, h1,h2 {
 	font-family: 'Ubuntu Condensed', sans-serif;
 }
 
@@ -30,10 +29,6 @@ h1,h2 {
 	padding-bottom: 25px;
 }
 
-body {
-	font-family: 'Lora', serif;
-}
-
 label {
 	display: block;
 	text-align: left;
@@ -42,4 +37,9 @@ label {
 input, button {
 	margin-top: 1em;
 	margin-bottom: 1em;
+}
+
+#site_name {
+	text-decoration: none;
+	color: black;
 }

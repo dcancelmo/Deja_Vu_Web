@@ -9,6 +9,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu+Condensed" rel="stylesheet">
 	<!-- Our CSS -->
 	<link rel="stylesheet" href="css/styles.css">
+	<script type="text/javascript" src="js/checkLogin.js"></script>
 </head>
 <body>
 

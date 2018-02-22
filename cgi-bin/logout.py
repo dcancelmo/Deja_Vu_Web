@@ -14,6 +14,5 @@ new_cookie['LOGIN']['expires'] = expires.strftime("%a,%d%b%Y%H:%M:%SGMT")
 
 print "Content-Type: text/html"
 print new_cookie
-print "Location: ../login.php"
 print
-print "<html><head><script>sessionStorage.clear();</script></head></html>"
+print '''<html><head><script>sessionStorage.clear();</script></head><body><script>window.location="../index.php"</script></body></html>'''

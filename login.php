@@ -9,12 +9,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu+Condensed" rel="stylesheet">
 		<!-- Our CSS -->
 		<link rel="stylesheet" href="css/styles.css">
-		<script type="text/javascript" src="js/loginRedirect.js"></script>
 	</head>
 	<body>
-
-
-
 		<div class="container">
 			<div class="row">
 				<div class="col-lg" id="header">

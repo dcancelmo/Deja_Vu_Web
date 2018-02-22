@@ -1,3 +1,3 @@
-$(document).ready(function () {
-	$('usernameNav').text(sessionStorage.getItem('user'));
-});
+var name = sessionStorage.getItem('user');
+console.log(name);
+$('#usernameNav').text(name); 

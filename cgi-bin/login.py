@@ -31,7 +31,7 @@ if rows is not None:
 		print 'Content-Type: text/html'
 		print cookie.output()
 		print
-		print '''<html><head><script>sessionStorage.setItem("user", "''' + userName + '''");</script><script>window.location="../dashboard.php";</script></head></html>'''
+		print '''<html><head><script>sessionStorage.setItem("user", "''' + userName + '''");</script></head><body><script>window.location="../dashboard.php";</script></body>/html>'''
 	else:
 		print "Content-Type: text/html"
 		print "Location: ../login_messages/incorrect.html"

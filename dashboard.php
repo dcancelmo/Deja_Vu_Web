@@ -16,6 +16,7 @@
 <?php include('php/scripts.php'); ?>
 
 <?php include('php/nav_bar.php'); ?>
+<script type="text/javascript" src="js/getUser.js"></script>
 
 <div class="container">
 

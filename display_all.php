@@ -16,12 +16,9 @@
 
 <div class="container">
 
-	<div class="row" id="headerTitle">
-		<h1>Deja Vu</h1>
-	</div>
-
-
-
+	<?php include('php/header.php'); ?>
+	
+	
 
 </div>
 

@@ -16,9 +16,7 @@
 
 <div class="container">
 
-	<div class="row" id="headerTitle">
-		<h1><a id="site_name" href="dashboard.php">Deja Vu</h1>
-	</div>
+	<?php include('php/header.php'); ?>
 
 	<!-- Issue Lookup Form -->
 	<div class="row">

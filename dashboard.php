@@ -12,6 +12,9 @@
 </head>
 <body>
 
+<!-- jQuery & Bootstrap scripts -->
+<?php include('php/scripts.php'); ?>
+
 <?php include('php/nav_bar.php'); ?>
 
 <div class="container">
@@ -98,9 +101,6 @@
 
 
 </div>
-
-<!-- jQuery & Bootstrap scripts -->
-<?php include('php/scripts.php'); ?>
 
 </body>
 </html>

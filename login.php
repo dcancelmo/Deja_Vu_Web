@@ -26,14 +26,15 @@
 					<input type="password" name="password" placeholder="Password" required>
 				</div>
 				<div class="row formQuestion">
-					<button type="submit"> Login </button>
+					<button class="btn btn-success" type="submit"> Login </button>
 				</div>
 				<div class="row formQuestion">
-					<h4><a href="account_create.php">Or create a new account!</a></h4>
+					<button class="btn btn-sm btn-info" id="createAccountButton" onclick="window.location.replace('account_create.php')">Create Account</button>
 				</div>
 			</form>
 		</div>
 
 		<?php include('php/scripts.php'); ?>
+
 	</body>
 </html>

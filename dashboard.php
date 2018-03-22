@@ -18,6 +18,10 @@
 		<?php include('php/nav_bar.php'); ?>
 		<script type="text/javascript" src="js/getUser.js"></script>
 
+		<<!-- div id="submit-success" class="alert alert-success alert-dismissible fade in">Success! Issues saved to DejaVu. 
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			</div> -->
+
 		<div class="container">
 
 			<?php include('php/header.php'); ?>
@@ -95,7 +99,7 @@
 					</div>
 
 					<div class="row formQuestion">
-						<input class="btn btn-success" type="submit" value="Submit">
+						<input class="btn btn-success" type="submit" value="Submit" id="issue-submit">
 					</div>
 
 			</form>

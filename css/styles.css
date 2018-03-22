@@ -42,3 +42,7 @@ input, button {
 	text-decoration: none;
 	color: black;
 }
+
+table, th, td {
+	border: 1px solid black;
+}

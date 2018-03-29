@@ -34,7 +34,7 @@
 			</form>
 		</div>
 
-		<?php include('php/scripts.php'); ?>
+		<?php include('inc/scripts.php'); ?>
 
 	</body>
 </html>

@@ -33,7 +33,9 @@
 				</div>
 				<div class="row formQuestion">
 					<h4><a href="login.php">Go back to login</a></h4>
-					<h3 id="passMatch"></h3>
+				</div>
+				<div class="row formQuestion">
+					<h6 id="passMatch"></h6>
 				</div>
 			</form>
 		</div>

@@ -38,7 +38,7 @@
 			</form>
 		</div>
 
-		<?php include('php/scripts.php'); ?>
+		<?php include('inc/scripts.php'); ?>
 		<script src="js/passMatch.js"></script>
 
 	</body>

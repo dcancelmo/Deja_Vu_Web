@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		<!-- jQuery & Bootstrap scripts -->
-		<?php include('php/scripts.php'); ?>
+		<?php include('inc/scripts.php'); ?>
 		<script type="text/javascript" src="js/getLogin.js"></script>
 	 	<div id="response">
 	 	</div>

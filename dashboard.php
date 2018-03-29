@@ -13,9 +13,9 @@
 	</head>
 	<body>
 		<!-- jQuery & Bootstrap scripts -->
-		<?php include('php/scripts.php'); ?>
+		<?php include('inc/scripts.php'); ?>
 
-		<?php include('php/nav_bar.php'); ?>
+		<?php include('inc/nav_bar.php'); ?>
 		<script type="text/javascript" src="js/getUser.js"></script>
 
 		<<!-- div id="submit-success" class="alert alert-success alert-dismissible fade in">Success! Issues saved to DejaVu. 
@@ -24,7 +24,7 @@
 
 		<div class="container">
 
-			<?php include('php/header.php'); ?>
+			<?php include('inc/header.php'); ?>
 
 			<!-- Issue Lookup Form -->
 			<div class="row">

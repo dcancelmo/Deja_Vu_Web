@@ -14,15 +14,15 @@
 <body>
 
 <!-- jQuery & Bootstrap scripts -->
-<?php include('php/scripts.php'); ?>
+<?php include('inc/scripts.php'); ?>
 
-<?php include('php/nav_bar.php'); ?>
+<?php include('inc/nav_bar.php'); ?>
 <script type="text/javascript" src="js/getUser.js"></script>
 <script type="text/javascript" src="js/query.js"></script>
 
 <div class="container">
 
-	<?php include('php/header.php'); ?>
+	<?php include('inc/header.php'); ?>
 	
 	<div id="response"></div>
 

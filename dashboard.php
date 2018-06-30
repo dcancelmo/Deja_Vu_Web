@@ -18,7 +18,7 @@
 		<?php include('inc/nav_bar.php'); ?>
 		<script type="text/javascript" src="js/getUser.js"></script>
 
-		<<!-- div id="submit-success" class="alert alert-success alert-dismissible fade in">Success! Issues saved to DejaVu. 
+		<!-- div id="submit-success" class="alert alert-success alert-dismissible fade in">Success! Issues saved to DejaVu.
 				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			</div> -->
 

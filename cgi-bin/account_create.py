@@ -39,8 +39,8 @@ try:
 	expires = datetime.datetime.now() + datetime.timedelta(days=30)
 	cookie['LOGIN']['expires'] = expires.strftime('%a, %d %b %Y %H:%M:%S')
 	print cookie.output()
-	print "Location: ../dashboard.php"
 	print
+	print '''<html><head><script>sessionStorage.setItem("user", "''' + username + '''");</script></head><body><script>window.location="../dashboard.php";</script></body>/html>'''
 # else:
 except sqlite3.IntegrityError:
 	print "Location: ../login_messages/user_unavailable.html"

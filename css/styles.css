@@ -12,10 +12,6 @@ html, body {
 	display: block;
 }
 
-.formQuestion {
-	padding-bottom: 20px;
-}
-
 .navbar-brand, h1,h2 {
 	font-family: 'Ubuntu Condensed', sans-serif;
 }

@@ -27,44 +27,44 @@
 			<?php include('inc/header.php'); ?>
 
 			<!-- Issue Lookup Form -->
-			<div class="row">
-				<h2>Search for an Issue</h2>
-			</div>
-			<form id="lookupForm" action="" method="post">
-				<div class="row">
-					<label>Search by:</label>
-				</div>
-
-				<div class="row">
-					<input type="radio" id="radioB1" name="searchFor" value="name">
-					<label for="radioB1">Name</label>
-				</div>
-
-				<div class="row">
-					<input type="radio" id="radioB2" name="searchFor" value="description">
-					<label for="radioB2">Description</label>
-				</div>
-
-				<div class="row">
-					<input type="radio" id="radioB3" name="searchFor" value="solution">
-					<label for="radioB3">Solution</label>
-				</div>
-
-				<div class="row">
-					<input type="radio" id="radioB4" name="searchFor" value="attempts">
-					<label for="radioB4">Attempts</label>
-				</div>
-
-				<div class="row">
-					<input type="radio" id="radioB5" name="searchFor" value="tags">
-					<label for="radioB5">Tags</label>
-				</div>
-
-				<div class="row">
-					<input class="btn btn-info" type="submit" value="Search">
-				</div>
-
-			</form>
+<!--			<div class="row">-->
+<!--				<h2>Search for an Issue</h2>-->
+<!--			</div>-->
+<!--			<form id="lookupForm" action="" method="post">-->
+<!--				<div class="row">-->
+<!--					<label>Search by:</label>-->
+<!--				</div>-->
+<!---->
+<!--				<div class="row">-->
+<!--					<input type="radio" id="radioB1" name="searchFor" value="name">-->
+<!--					<label for="radioB1">Name</label>-->
+<!--				</div>-->
+<!---->
+<!--				<div class="row">-->
+<!--					<input type="radio" id="radioB2" name="searchFor" value="description">-->
+<!--					<label for="radioB2">Description</label>-->
+<!--				</div>-->
+<!---->
+<!--				<div class="row">-->
+<!--					<input type="radio" id="radioB3" name="searchFor" value="solution">-->
+<!--					<label for="radioB3">Solution</label>-->
+<!--				</div>-->
+<!---->
+<!--				<div class="row">-->
+<!--					<input type="radio" id="radioB4" name="searchFor" value="attempts">-->
+<!--					<label for="radioB4">Attempts</label>-->
+<!--				</div>-->
+<!---->
+<!--				<div class="row">-->
+<!--					<input type="radio" id="radioB5" name="searchFor" value="tags">-->
+<!--					<label for="radioB5">Tags</label>-->
+<!--				</div>-->
+<!---->
+<!--				<div class="row">-->
+<!--					<input class="btn btn-info" type="submit" value="Search">-->
+<!--				</div>-->
+<!---->
+<!--			</form>-->
 
 			<!-- Issue submission form -->
 			<div class="row">
@@ -72,36 +72,33 @@
 			</div>
 
 			<form id="submissionForm" action="cgi-bin/issue_create.py" method="post">
-					<div class="row formQuestion">
-						<label>Name for issue:</label>
-						<input type="text" name="name" required>
+					<div class="form-group">
+						<label for="name">Name for issue:</label>
+						<input type="text" id="name" name="name" class="form-control col-xs-3" required>
 					</div>
 
 
-					<div class="row formQuestion">
-						<label>Description:</label>
-						<textarea name="description" rows="2" cols="50" required></textarea>
+                    <div class="form-group">
+						<label for="description">Description:</label>
+						<textarea id="description" name="description" rows="2" cols="50" class="form-control" required></textarea>
 					</div>
 
-					<div class="row formQuestion">
-						<label>Solution:</label>
-						<textarea name="solution" rows="4" cols="50" required></textarea>
+                    <div class="form-group">
+						<label for="solution">Solution:</label>
+						<textarea id="solution" name="solution" rows="4" cols="50" class="form-control" required></textarea>
 					</div>
 
-					<div class="row formQuestion">
-						<label>Attempts:</label>
-						<textarea name="attempts" rows="4" cols="50" required></textarea>
+                    <div class="form-group">
+						<label for="attempts">Attempts:</label>
+						<textarea id="attempts" name="attempts" rows="4" cols="50" class="form-control" required></textarea>
 					</div>
 
-					<div class="row formQuestion">
-						<label>Tags (separate with comma and space):</label>
-						<input type="text" name="tags" size="50" required>
+                    <div class="form-group">
+						<label for="tags">Tags (separate with comma and space):</label>
+						<input type="text" id="tags" name="tags" size="50" class="form-control col-xs-4" required>
 					</div>
 
-					<div class="row formQuestion">
-						<input class="btn btn-success" type="submit" value="Submit" id="issue-submit">
-					</div>
-
+                    <input class="btn btn-success" type="submit" value="Submit" id="issue-submit">
 			</form>
 
 		</div>
